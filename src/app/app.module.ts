@@ -4,7 +4,7 @@ import { StoreModule } from '@ngrx/store';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
-import { HeroesComponent } from './heroes/components/heroes-list/heroes.component';
+import { HeroesComponent } from './heroes/components/heroes/heroes.component';
 import { HeroDetailComponent } from './heroes/components/hero-detail/hero-detail.component';
 import { MessagesComponent } from './heroes/components/messages/messages.component';
 import { AppRoutingModule } from './/app-routing.module';

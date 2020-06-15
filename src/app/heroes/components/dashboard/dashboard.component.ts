@@ -21,7 +21,6 @@ export class DashboardComponent implements OnInit {
   ngOnInit() {
     this.store.dispatch(new fromStore.LoadHeroes());
     this.heroes$ = this.store.select(fromStore.getAllHeroes);
-    console.log(this.store.select(fromStore.getAppState));
     // this.getHeroes();
   }
 
