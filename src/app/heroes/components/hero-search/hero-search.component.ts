@@ -6,8 +6,8 @@ import {
    debounceTime, distinctUntilChanged, switchMap
  } from 'rxjs/operators';
 
-import { Hero } from '../hero';
-import { HeroService } from '../hero.service';
+import { Hero } from '../../models/hero';
+import { HeroService } from '../../services/hero.service';
 
 @Component({
   selector: 'app-hero-search',
@@ -22,7 +22,7 @@ export class HeroSearchComponent implements OnInit {
 
   // Push a search term into the observable stream.
   search(term: string): void {
-    this.searchTerms.next(term);s
+    this.searchTerms.next(term);
   }
 
   ngOnInit(): void {
