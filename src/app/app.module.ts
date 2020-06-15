@@ -12,7 +12,8 @@ import { DashboardComponent } from './heroes/components/dashboard/dashboard.comp
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './heroes/services/in-memory-data.service';
 import { HeroSearchComponent } from './heroes/components/hero-search/hero-search.component';
-import { reducers } from '../app/heroes/store';
+import { reducers, effects } from '../app/heroes/store';
+import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../environments/environment';
 import * as fromServices from '../app/heroes/services';
@@ -35,6 +36,7 @@ import * as fromServices from '../app/heroes/services';
     HttpClientModule,
     StoreModule.forRoot({}),
     StoreModule.forFeature('heroes', reducers),
+    EffectsModule.forRoot(effects),
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false}
     ),
